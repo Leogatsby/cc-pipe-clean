@@ -1,0 +1,32 @@
+.footer {
+    /* 1.박스모델 */
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+
+    .container {
+        /* 1.박스모델 */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .footerContent {
+            /* 2.레이아웃 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footerLogo {
+                /* 3.디자인/폰트/애니메이션 */
+                font-weight: 700;
+                font-size: 20px;
+                color: var(--텍스트-컬러-보조);
+            }
+
+            .copyright {
+                /* 3.디자인/폰트/애니메이션 */
+                color: #90A4AE;
+                font-size: 14px;
+            }
+        }
+    }
+}

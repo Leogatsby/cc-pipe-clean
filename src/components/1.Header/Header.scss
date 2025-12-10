@@ -1,0 +1,74 @@
+.header {
+    /* 1.박스모델 */
+    height: 80px;
+    background: rgba(255, 255, 255, 1);
+    //backdrop-filter: blur(10px);
+    box-shadow: var(--그림자-작게);
+
+    /* 2.레이아웃 */
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .container {
+        /* 1.박스모델 */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        /* 2.레이아웃 */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            /* 2.레이아웃 */
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            /* 3.디자인/폰트/애니메이션 */
+            color: var(--컬러-메인);
+            text-decoration: none;
+
+            &-icon {
+                /* 3.디자인/폰트/애니메이션 */
+                font-size: 32px;
+                line-height: 1;
+                display: block;
+            }
+
+            h1 {
+                /* 3.디자인/폰트/애니메이션 */
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+                line-height: 1;
+                margin-top: 2px;
+                /* Visual correction */
+            }
+        }
+
+        .nav {
+            /* 2.레이아웃 */
+            display: flex;
+            align-items: center;
+            gap: 32px;
+
+            a {
+                /* 3.디자인/폰트/애니메이션 */
+                text-decoration: none;
+                color: var(--텍스트-컬러-메인);
+                font-weight: 500;
+                transition: color 0.2s;
+
+                &:hover {
+                    color: var(--컬러-메인);
+                }
+            }
+        }
+    }
+}

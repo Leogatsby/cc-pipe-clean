@@ -1,0 +1,178 @@
+.hero {
+    /* 1.박스모델 */
+    padding: 80px 0;
+    background: linear-gradient(135deg, #F0F9FF 0%, #ffffff 100%);
+
+    /* 2.레이아웃 */
+    overflow: hidden;
+
+    .container {
+        /* 1.박스모델 */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        &.heroContent {
+            /* 2.레이아웃 */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+
+            @media (max-width: 960px) {
+                /* 2.레이아웃 */
+                flex-direction: column;
+
+                /* 3.디자인/폰트/애니메이션 */
+                text-align: center;
+            }
+
+            .heroText {
+                /* 1.박스모델 */
+                flex: 1;
+
+                .badge {
+                    /* 1.박스모델 */
+                    margin-bottom: 24px;
+                    padding: 6px 16px;
+                    background-color: var(--컬러-메인_밝은);
+                    border-radius: 20px;
+
+                    /* 2.레이아웃 */
+                    display: inline-block;
+
+                    /* 3.디자인/폰트/애니메이션 */
+                    color: var(--컬러-메인_어두운);
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+
+                .title {
+                    /* 1.박스모델 */
+                    margin-bottom: 24px;
+
+                    /* 3.디자인/폰트/애니메이션 */
+                    font-size: 48px;
+                    line-height: 1.3;
+                    color: #1A237E;
+
+                    @media (max-width: 600px) {
+                        /* 3.디자인/폰트/애니메이션 */
+                        font-size: 32px;
+                    }
+                }
+
+                .description {
+                    /* 1.박스모델 */
+                    margin-bottom: 40px;
+
+                    /* 3.디자인/폰트/애니메이션 */
+                    font-size: 18px;
+                    color: var(--텍스트-컬러-보조);
+                }
+
+                .heroActions {
+                    /* 2.레이아웃 */
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+
+                    @media (max-width: 960px) {
+                        justify-content: center;
+                    }
+                }
+            }
+
+            .heroImageWrapper {
+                /* 1.박스모델 */
+                flex: 1;
+
+                /* 2.레이아웃 */
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+                &:hover .heroImg {
+                    /* 2.레이아웃 */
+                    transform: rotate(0);
+                }
+
+                .heroImg {
+                    /* 1.박스모델 */
+                    width: 100%;
+                    max-width: 500px;
+                    height: auto;
+                    border-radius: 30px;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+
+                    /* 2.레이아웃 */
+                    transform: rotate(2deg);
+
+                    /* 3.디자인/폰트/애니메이션 */
+                    transition: transform 0.5s ease;
+                }
+
+                .floatingCard {
+                    /* 1.박스모델 */
+                    padding: 16px;
+                    background: var(--컬러-색-흰색);
+                    border-radius: 16px;
+                    box-shadow: var(--그림자-중간);
+
+                    /* 3.디자인/폰트/애니메이션 */
+                    animation: float 4s ease-in-out infinite;
+
+                    /* 2.레이아웃 */
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    position: absolute;
+
+                    span {
+                        /* 3.디자인/폰트/애니메이션 */
+                        color: var(--컬러-보조);
+                        font-size: 24px;
+                    }
+
+                    p {
+                        /* 1.박스모델 */
+                        margin: 0;
+
+                        /* 3.디자인/폰트/애니메이션 */
+                        font-weight: 700;
+                        font-size: 14px;
+                    }
+
+                    &.card1 {
+                        /* 2.레이아웃 */
+                        top: 40px;
+                        left: -20px;
+                    }
+
+                    &.card2 {
+                        /* 2.레이아웃 */
+                        bottom: 60px;
+                        right: -20px;
+
+                        /* 3.디자인/폰트/애니메이션 */
+                        animation-delay: 2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

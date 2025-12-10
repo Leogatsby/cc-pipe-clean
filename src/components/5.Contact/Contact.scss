@@ -1,0 +1,68 @@
+.cta {
+    /* 1.박스모델 */
+    padding: 80px 0;
+
+    .container {
+        /* 1.박스모델 */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .ctaBox {
+            /* 1.박스모델 */
+            padding: 60px;
+            background-color: var(--컬러-메인);
+            border-radius: 30px;
+            background-image: linear-gradient(135deg, #0288D1 0%, #01579B 100%);
+            box-shadow: 0 20px 40px rgba(2, 136, 209, 0.3);
+
+            /* 3.디자인/폰트/애니메이션 */
+            text-align: center;
+            color: var(--컬러-색-흰색);
+
+            @media (max-width: 600px) {
+                /* 1.박스모델 */
+                padding: 40px 24px;
+            }
+
+            h2 {
+                /* 1.박스모델 */
+                margin-bottom: 16px;
+
+                /* 3.디자인/폰트/애니메이션 */
+                font-size: 36px;
+            }
+
+            p {
+                /* 1.박스모델 */
+                margin-bottom: 40px;
+
+                /* 3.디자인/폰트/애니메이션 */
+                font-size: 18px;
+                opacity: 0.9;
+            }
+
+            .btnWhite {
+                /* 1.박스모델 */
+                padding: 16px 40px;
+                background-color: var(--컬러-색-흰색);
+                border-radius: 50px;
+
+                /* 2.레이아웃 */
+                display: inline-block;
+
+                /* 3.디자인/폰트/애니메이션 */
+                color: var(--컬러-메인);
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: none;
+                transition: transform 0.2s;
+
+                &:hover {
+                    /* 2.레이아웃 */
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
