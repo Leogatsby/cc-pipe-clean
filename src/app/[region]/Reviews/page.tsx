@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Header from '@/components/1.Header/Header';
-import Footer from '@/components/6.Footer/Footer';
+import Header from '@/components/Main/1.Header/Header';
+import Footer from '@/components/Main/6.Footer/Footer';
 import { 리뷰데이터들, 리뷰데이터타입 } from './_data/reviews-data';
 import './page.scss';
 
@@ -39,7 +39,7 @@ export default function ReviewsPage() {
 // 별도 파일이 아닌 내부 컴포넌트로 분리
 function ReviewCard({ 리뷰데이터추상 }: { 리뷰데이터추상: 리뷰데이터타입 }) {
     return (
-        <Link href={`/reviews/${리뷰데이터추상.slug}-${리뷰데이터추상.id}`} className="reviewCardLink">
+        <Link href={`/Reviews/${리뷰데이터추상.slug}-${리뷰데이터추상.id}`} className="reviewCardLink">
             <article className="reviewCard">
                 <div className="reviewHeader">
                     <div className="stars">

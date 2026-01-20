@@ -1,14 +1,27 @@
 import Link from 'next/link';
 import './Hero.scss';
 
-export default function Hero() {
+interface HeroProps {
+    regionData?: {
+        name: string;
+        title: string;
+        description: string;
+    };
+}
+
+export default function Hero({ regionData }: HeroProps) {
+    // regionData가 없으면 기본값 사용
+    const displayTitle = regionData?.title || "막힌 배관, 냄새나는 하수구";
+    const displayName = regionData?.name || "서울/경기";
+
     return (
         <section className="hero">
             <div className="container heroContent">
                 <div className="heroText">
                     <span className="badge">24시간 긴급출동</span>
                     <h2 className="title">
-                        막힌 배관, 냄새나는 하수구<br />
+                        {/* {displayName} 대표 배관 전문 업체<br /> */}{/* 디자인에 따라 수정 가능 */}
+                        {displayTitle}<br />
                         <span style={{ color: 'var(--컬러-메인)' }}>청정배관</span>이 해결해드립니다
                     </h2>
                     <p className="description">

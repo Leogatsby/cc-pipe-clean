@@ -9,9 +9,10 @@ const notoSansKR = Noto_Sans_KR({
   display: 'swap',
 });
 
+// 기본 메타데이터 (fallback용) - 실제로는 [region]/layout.tsx가 덮어씀
 export const metadata: Metadata = {
-  title: '청정배관 - 전문 하수구 뚫기 서비스',
-  description: '관악구 변기막힘 , 하수구 막힘 , 하수구 뚫기 ,확실하고 깨끗한 하수구 뚫기, 배관 청소 전문 서비스. 24시간 상담 가능.',
+  title: '청정배관',
+  description: '전문 하수구 뚫기 서비스',
 };
 
 export default function RootLayout({

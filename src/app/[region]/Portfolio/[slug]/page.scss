@@ -1,0 +1,99 @@
+.reviewDetailSection {
+    /* 1.박스모델 */
+    padding: 60px 0;
+
+    .headerContainer {
+        /* 2.레이아웃 */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+
+        .backButton {
+            /* 1.박스모델 */
+            margin-bottom: 30px;
+            padding: 10px 20px;
+
+            /* 2.레이아웃 */
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            /* 3.디자인/폰트/애니메이션 */
+            text-decoration: none;
+            color: var(--텍스트-컬러-보조);
+            font-weight: 500;
+            background-color: #f5f5f5;
+            border-radius: 50px;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: #e0e0e0;
+                color: var(--컬러-메인);
+                transform: translateX(-4px);
+            }
+        }
+    }
+
+    .detailCard {
+        /* 1.박스모델 */
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px;
+
+        /* 3.디자인/폰트/애니메이션 */
+        background-color: var(--컬러-색-흰색);
+        border-radius: 24px;
+        box-shadow: var(--그림자-중간);
+
+        .reviewHeader {
+            /* 2.레이아웃 */
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+
+            .stars {
+                /* 3.디자인/폰트/애니메이션 */
+                font-size: 32px;
+                color: #FFD700;
+                letter-spacing: 4px;
+            }
+        }
+
+        .content {
+            /* 3.디자인/폰트/애니메이션 */
+            font-size: 22px;
+            line-height: 1.8;
+            text-align: center;
+            color: var(--텍스트-컬러-본문);
+            word-break: keep-all;
+        }
+
+        .reviewer {
+            /* 2.레이아웃 */
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+
+            .avatar {
+                /* 1.박스모델 */
+                width: 80px;
+                height: 80px;
+
+                /* 2.레이아웃 */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                /* 3.디자인/폰트/애니메이션 */
+                background-color: var(--컬러-배경-보조);
+                border-radius: 50%;
+                font-size: 32px;
+                font-weight: bold;
+                color: var(--컬러-메인);
+            }
+        }
+    }
+}
